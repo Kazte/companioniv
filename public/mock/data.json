@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "build_name": "Twisting Blades",
+    "creator": "Lexyu",
+    "url": "https://www.icy-veins.com/d4/guides/twisting-blades-rogue-leveling-build/"
+  },
+  "data": {
+    "skill_tree": [
+      {
+        "order": 1,
+        "skill": "Puncture",
+        "cluster": "Basic Skill"
+      },
+      {
+        "order": 2,
+        "skill": "Enhanced Puncture",
+        "cluster": "Basic Skill"
+      },
+      {
+        "order": 3,
+        "skill": "Twisting Blades",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 4,
+        "skill": "Fundamental Puncture",
+        "cluster": "Basic Skill"
+      },
+      {
+        "order": 5,
+        "skill": "Enhanced Twisting Blades",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 6,
+        "skill": "Improved Twisting Blades",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 7,
+        "skill": "Dash",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 8,
+        "skill": "Shadow Step",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 9,
+        "skill": "Twisting Blades Level 2",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 10,
+        "skill": "Twisting Blades Level 3",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 11,
+        "skill": "Twisting Blades Level 4",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 12,
+        "skill": "Concealment",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 13,
+        "skill": "Enhanced Stealth",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 14,
+        "skill": "Countering Stealth",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 15,
+        "skill": "Twisting Blades Level 5",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 16,
+        "skill": "Enhanced Shadow Step",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 17,
+        "skill": "Shadow Imbuement",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 18,
+        "skill": "Enhanced Shadow Imbuement",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 19,
+        "skill": "Mixed Shadow Imbuement",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 20,
+        "skill": "Shadow Crash",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 21,
+        "skill": "Consuming Shadows",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 22,
+        "skill": "Consuming Shadows Level 2",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 23,
+        "skill": "Consuming Shadows Level 3",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 24,
+        "skill": "Methodical Shadow Step",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 25,
+        "skill": "Adrenaline Rush",
+        "cluster": "Ultimate Skill"
+      },
+      {
+        "order": 26,
+        "skill": "Haste",
+        "cluster": "Ultimate Skill"
+      },
+      {
+        "order": 27,
+        "skill": "Haste Level 2",
+        "cluster": "Ultimate Skill"
+      },
+      {
+        "order": 28,
+        "skill": "Haste Level 3",
+        "cluster": "Ultimate Skill"
+      },
+      {
+        "order": 29,
+        "skill": "Concussive",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 30,
+        "skill": "Trick Attacks",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 31,
+        "skill": "Trick Attacks Level 2",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 32,
+        "skill": "Trick Attacks Level 3",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 33,
+        "skill": "Concussive Level 2",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 34,
+        "skill": "Close Quarters Combat (switch to Momentum if you need Damage Reduction)",
+        "cluster": "Key Passives"
+      },
+      {
+        "order": 35,
+        "skill": "Concussive Level 3",
+        "cluster": "Agility Skill"
+      },
+      {
+        "order": 36,
+        "skill": "Stutter Step",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 37,
+        "skill": "Stutter Step Level 2",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 38,
+        "skill": "Stutter Step Level 3",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 39,
+        "skill": "Exploit",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 40,
+        "skill": "Exploit Level 2",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 41,
+        "skill": "Exploit Level 3",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 42,
+        "skill": "Malice",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 43,
+        "skill": "Malice Level 2",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 44,
+        "skill": "Malice Level 3",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 45,
+        "skill": "Agile",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 46,
+        "skill": "Agile Level 2",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 47,
+        "skill": "Agile Level 3",
+        "cluster": "Subterfuge Skill"
+      },
+      {
+        "order": 48,
+        "skill": "Sturdy",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 49,
+        "skill": "Sturdy Level 2",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 50,
+        "skill": "Sturdy Level 3",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 51,
+        "skill": "Siphoning Strikes",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 52,
+        "skill": "Siphoning Strikes Level 2",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 53,
+        "skill": "Siphoning Strikes Level 3",
+        "cluster": "Core Skill"
+      },
+      {
+        "order": 54,
+        "skill": "Precision Imbuement",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 55,
+        "skill": "Precision Imbuement Level 2",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 56,
+        "skill": "Precision Imbuement Level 3",
+        "cluster": "Imbuement Skill"
+      },
+      {
+        "order": 57,
+        "skill": "Impetus",
+        "cluster": "Ultimate Skill"
+      },
+      {
+        "order": 58,
+        "skill": "Impetus Level 2",
+        "cluster": "Ultimate Skill"
+      }
+    ]
+  }
+}
+
