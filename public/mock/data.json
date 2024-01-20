@@ -2,7 +2,8 @@
   "meta": {
     "build_name": "Twisting Blades",
     "creator": "Lexyu",
-    "url": "https://www.icy-veins.com/d4/guides/twisting-blades-rogue-leveling-build/"
+    "url": "https://www.icy-veins.com/d4/guides/twisting-blades-rogue-leveling-build/",
+    "max": 58
   },
   "data": {
     "skill_tree": [

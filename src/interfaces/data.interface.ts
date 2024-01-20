@@ -7,6 +7,7 @@ export interface IMeta {
   build_name: string
   creator: string
   url: string
+  max: number
 }
 
 export interface IData {

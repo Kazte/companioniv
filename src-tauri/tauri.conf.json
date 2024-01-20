@@ -15,6 +15,9 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "all": true
       }
     },
     "bundle": {
@@ -34,11 +37,15 @@
     },
     "windows": [
       {
-        "fullscreen": false,
-        "resizable": true,
         "title": "CompanionIV",
-        "width": 800,
-        "height": 600
+        "label": "main",
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": false,
+        "fullscreen": false,
+        "decorations": false,
+        "alwaysOnTop": false,
+        "transparent": true
       }
     ]
   }
