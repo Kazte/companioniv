@@ -10,11 +10,17 @@ import {
 import { Minus, X } from 'lucide-react';
 import { Button } from '@/components/ui/button.tsx';
 import { appWindow } from '@tauri-apps/api/window';
-import { open } from '@tauri-apps/api/dialog';
 import { useAppStore } from '@/stores/app.store';
+import { OPEN_DIALOG_BUILD_OPTIONS, openFile } from '@/utils/open-file';
+import { IDataBuild } from '@/interfaces/data.interface';
+import schema from '@/schemas/build.schema';
+import { readTextFile } from '@tauri-apps/api/fs';
+import Avj from 'ajv';
+import { useToast } from '../ui/use-toast';
 // import { ModeToggle } from '../mode-toggle';
 
 export default function Navbar() {
+  const { toast } = useToast();
   const { setInGameMode, skillTree, setSkillTree, currentStep } = useAppStore(
     (state) => state
   );
@@ -28,21 +34,40 @@ export default function Navbar() {
   };
 
   const handleOpen = async () => {
-    const selected = await open({
-      multiple: true,
-      filters: [
-        {
-          name: 'Image',
-          extensions: ['png', 'jpeg']
-        }
-      ]
-    });
-    if (Array.isArray(selected)) {
-      console.log('user selected', selected);
-    } else if (selected === null) {
-      console.log('user cancelled');
+    const selectedPath = await openFile(OPEN_DIALOG_BUILD_OPTIONS);
+
+    await setFile(selectedPath);
+  };
+
+  const setFile = async (filePath: string | null) => {
+    if (filePath) {
+      const entry = await readTextFile(filePath);
+      const data: IDataBuild = JSON.parse(entry);
+
+      // validate data
+      const avj = new Avj();
+
+      const validate = avj.compile(schema);
+
+      const isValid = validate(data);
+
+      if (!isValid) {
+        toast({
+          title: 'Invalid build',
+          description:
+            'The build you selected is invalid, maybe it is not a valid build schema.',
+          variant: 'destructive'
+        });
+        return;
+      }
+
+      setSkillTree(data);
     } else {
-      console.log('failed to open dialog');
+      toast({
+        title: 'Invalid path',
+        description: 'The path you selected is invalid!',
+        variant: 'destructive'
+      });
     }
   };
 
