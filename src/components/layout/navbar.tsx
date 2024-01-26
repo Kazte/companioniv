@@ -130,7 +130,7 @@ export default function Navbar() {
       <div className='flex flex-row gap-2 '>
         {/* <ModeToggle /> */}
         <Button
-          variant='ghost'
+          variant='secondary'
           className='h-1/2 w-1/2'
           size='icon'
           onClick={handleOnMinize}
@@ -138,7 +138,7 @@ export default function Navbar() {
           <Minus />
         </Button>
         <Button
-          variant='ghost'
+          variant='destructive'
           className='h-1/2 w-1/2'
           size='icon'
           onClick={handleOnClose}
