@@ -6,7 +6,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "diabloiv-companion",
+    "productName": "CompanionIV",
     "version": "0.0.0"
   },
   "tauri": {
