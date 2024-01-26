@@ -20,7 +20,6 @@ import Avj from 'ajv';
 import schema from './schemas/build.schema';
 import { useToast } from './components/ui/use-toast';
 import { openFile, OPEN_DIALOG_BUILD_OPTIONS } from './utils/open-file';
-import { Command } from './components/ui/command';
 import { Badge } from './components/ui/badge';
 
 function App() {

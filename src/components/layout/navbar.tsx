@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button.tsx';
 import { appWindow } from '@tauri-apps/api/window';
 import { open } from '@tauri-apps/api/dialog';
 import { useAppStore } from '@/stores/app.store';
-import { ModeToggle } from '../mode-toggle';
+// import { ModeToggle } from '../mode-toggle';
 
 export default function Navbar() {
   const { setInGameMode, skillTree, setSkillTree, currentStep } = useAppStore(
