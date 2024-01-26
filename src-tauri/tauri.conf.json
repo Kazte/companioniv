@@ -23,7 +23,8 @@
         "all": true
       },
       "dialog": {
-        "all": true
+        "all": false,
+        "open": true
       },
       "fs": {
         "all": false,
