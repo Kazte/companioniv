@@ -1,5 +1,5 @@
 import {
-  Menubar as Menu,
+  Menubar,
   MenubarContent,
   MenubarItem,
   MenubarMenu,
@@ -12,9 +12,12 @@ import { Button } from '@/components/ui/button.tsx';
 import { appWindow } from '@tauri-apps/api/window';
 import { open } from '@tauri-apps/api/dialog';
 import { useAppStore } from '@/stores/app.store';
+import { ModeToggle } from '../mode-toggle';
 
-export default function Menubar() {
-  const { setInGameMode } = useAppStore((state) => state);
+export default function Navbar() {
+  const { setInGameMode, skillTree, setSkillTree, currentStep } = useAppStore(
+    (state) => state
+  );
 
   const handleOnMinize = () => {
     appWindow.minimize();
@@ -48,7 +51,7 @@ export default function Menubar() {
   };
 
   return (
-    <Menu
+    <Menubar
       className='rounded-none border-b border-divider px-2 lg:px-4 justify-between h-[35px]'
       data-tauri-drag-region
     >
@@ -80,6 +83,13 @@ export default function Menubar() {
             <MenubarItem onClick={handleInGameMode}>
               In Game Mode<MenubarShortcut>⇧⌘Home</MenubarShortcut>
             </MenubarItem>
+            <MenubarItem
+              onClick={() => {
+                setSkillTree();
+              }}
+            >
+              Close Build
+            </MenubarItem>
             <MenubarSeparator />
             <MenubarItem>Preferences</MenubarItem>
             <MenubarSeparator />
@@ -87,8 +97,13 @@ export default function Menubar() {
           </MenubarContent>
         </MenubarMenu>
       </div>
+      {skillTree && (
+        <div className='pointer-events-none text-center'>
+          {skillTree?.meta.build_name} ({currentStep})
+        </div>
+      )}
       <div className='flex flex-row gap-2 '>
-        {/*<ModeToggle/>*/}
+        {/* <ModeToggle /> */}
         <Button
           variant='ghost'
           className='h-1/2 w-1/2'
@@ -106,6 +121,6 @@ export default function Menubar() {
           <X />
         </Button>
       </div>
-    </Menu>
+    </Menubar>
   );
 }

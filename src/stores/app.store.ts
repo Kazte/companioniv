@@ -9,7 +9,7 @@ type State = {
 
 type Actions = {
   setInGameMode: (set: boolean) => void;
-  setSkillTree: (skillTree: IDataBuild) => void;
+  setSkillTree: (skillTree?: IDataBuild) => void;
   setCurrentStep: (currentStep: number) => void;
 };
 

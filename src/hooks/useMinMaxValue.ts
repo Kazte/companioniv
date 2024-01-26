@@ -1,12 +1,18 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 
 interface Props {
   startValue: number;
   minValue: number;
   maxValue: number;
+  onChange?: (value: number) => void;
 }
 
-export default function useMinMaxValue({startValue, minValue, maxValue}: Props) {
+export default function useMinMaxValue({
+  startValue,
+  minValue,
+  maxValue,
+  onChange
+}: Props) {
   const [value, setValue] = useState(startValue);
 
   useEffect(() => {
@@ -20,15 +26,15 @@ export default function useMinMaxValue({startValue, minValue, maxValue}: Props) 
   }, []);
 
   useEffect(() => {
-    setValue(prevState => {
-      if (prevState > maxValue)
-        return maxValue;
-      else if (prevState < minValue)
-        return minValue;
+    setValue((prevState) => {
+      if (prevState > maxValue) return maxValue;
+      else if (prevState < minValue) return minValue;
+
+      if (onChange) onChange(prevState);
 
       return prevState;
     });
   }, [value]);
 
-  return {value, setValue};
+  return { value, setValue };
 }
